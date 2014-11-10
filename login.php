@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php
 
-?>
 <head>
 
     <meta charset="utf-8">
@@ -52,10 +50,10 @@
             
         </nav>
 
-            <div class="container">
+            <div class="container-fluid">
     <div class="row">
         <form role="form">
-            <div class="col-md-12">
+            <div class="col-lg-12">
                <div id="loginbox" style="margin-top:30px;" class="mainbox col-md-5">                    
             <div class="panel panel-info" >
                     <div class="panel-heading">
@@ -99,7 +97,7 @@
                                 <div style="margin-top:10px" class="form-group">
                                     <!-- Button -->
                                     <div class="col-sm-12 controls">
-                                      <a id="btn-login" href="#" class="btn btn-success">Login  </a>
+                                      <a id="btn-login" href="" class="btn btn-success">Login  </a>
                                     </div>
                                 </div>
                             </form>     
@@ -122,4 +120,5 @@
     <script src="js/bootstrap.min.js"></script>
 
 </body>
+
 </html>

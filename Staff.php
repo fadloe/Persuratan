@@ -1,7 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <?php
+include_once 'config.php';
+ 
+class Login {
+//Database connect
+ 
+public function __construct() {
+ $db = new DB_Class();
+ }
+ 
+/// Login process
+public function check_login($emailusername, $password) {
+ $password = md5($password);
+ $result = mysql_query("SELECT * from tb_user
+ WHERE email = '$emailusername' or username='$emailusername'
+ and password = '$password'");
+ $user_data = mysql_fetch_array($result); $no_rows = mysql_num_rows($result);
+ if ($no_rows == 1) {
+ $_SESSION['login'] = true;
+ $_SESSION['user_id'] = $user_data['user_id'];
+ $_SESSION['website'] = $user_data['website'];
+ return TRUE;
+ } else {
+ return FALSE;
+ }
+ }
+ 
+public function get_session() {
+ return $_SESSION['login'];
+ }
+// Logout
+public function user_logout() {
+ $_SESSION['login'] = FALSE;
+ session_destroy();
+}
+ 
+ }
 ?>
+
 <head>
 
     <meta charset="utf-8">
@@ -98,7 +136,7 @@
                                 <div style="margin-top:10px" class="form-group">
                                     <!-- Button -->
                                     <div class="col-sm-12 controls">
-                                      <a id="btn-login" href="#" class="btn btn-success">Login  </a>
+                                      <a id="btn-login" href="" class="btn btn-success">Login  </a>
                                     </div>
                                 </div>
                             </form>     

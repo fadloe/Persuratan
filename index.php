@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+ 
+include "koneksi.php";
+ 
+$perintah= "SELECT * FROM username";
+}
+?>
+
 <head>
 
     <meta charset="utf-8">

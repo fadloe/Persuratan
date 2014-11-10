@@ -98,7 +98,7 @@
                                 <div style="margin-top:10px" class="form-group">
                                     <!-- Button -->
                                     <div class="col-sm-12 controls">
-                                      <a id="btn-login" href="#" class="btn btn-success">Login  </a>
+                                      <a id="btn-login" href="disposisi.php" class="btn btn-success">Login  </a>
                                     </div>
                                 </div>
                             </form>     
